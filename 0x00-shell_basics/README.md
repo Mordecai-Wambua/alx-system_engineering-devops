@@ -25,3 +25,6 @@ command to move file called betty from /tmp/ to /tmp/my_first_directory
 Task 8:
 command to delete a file from a different directory
 
+Task 9:
+command to delete a directory from a different directory
+
