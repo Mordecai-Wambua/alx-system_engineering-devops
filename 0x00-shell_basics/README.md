@@ -31,3 +31,6 @@ command to delete a directory from a different directory
 Task 10:
 command to change the working directory to the previous one
 
+TAsk 11:
+command to list all files including hidden files in current, parent and boot directories in long format
+
