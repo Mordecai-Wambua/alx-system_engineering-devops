@@ -20,6 +20,8 @@ Task 6:
 script to create a directory named mu_first_directory in /tmp/ directory
 
 Task 7:
-comand to move file called betty from /tmp/ to /tmp/my_first_directory
+command to move file called betty from /tmp/ to /tmp/my_first_directory
 
+Task 8:
+command to delete a file from a different directory
 
