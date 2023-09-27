@@ -16,4 +16,7 @@ command to display hidden files in directory
 Task 5:
 command to display directory contents with long format, user and group IDs displayed numerically and hiden files
 
+Task 6:
+script to create a directory named mu_first_directory in /tmp/ directory
+
 
