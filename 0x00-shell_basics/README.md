@@ -54,3 +54,6 @@ create directories in current directory
 
 Task 18:
 command to list all files and directories separated by commas
+
+Task 19:
+creation of a magic filr 'school.mgc' that can be used with the command file to detect 'School' data files
