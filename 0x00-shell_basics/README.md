@@ -28,3 +28,6 @@ command to delete a file from a different directory
 Task 9:
 command to delete a directory from a different directory
 
+Task 10:
+command to change the working directory to the previous one
+
