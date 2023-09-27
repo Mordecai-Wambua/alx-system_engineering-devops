@@ -45,3 +45,6 @@ copies all HTML files from current working directory to its parent but it copies
 
 Task 15:
 command to move all files beginning with an uppercase letter to /tmp/u
+
+Task 16:
+command to delete files ending with the character ~
