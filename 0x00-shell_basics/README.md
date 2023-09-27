@@ -40,3 +40,5 @@ command to show the file type of iamafile located in /tmp
 Task 13:
 creating as symbolic link to /bin/ls called _ls_ in current working directory
 
+Task 14:
+copies all HTML files from current working directory to its parent but it copies only files that don't exist in its parent or are newer than the ersions in parent
