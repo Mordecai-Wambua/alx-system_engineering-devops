@@ -34,3 +34,6 @@ command to change the working directory to the previous one
 TAsk 11:
 command to list all files including hidden files in current, parent and boot directories in long format
 
+Task 12:
+command to show the file type of iamafile located in /tmp
+
