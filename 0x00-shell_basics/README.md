@@ -9,3 +9,8 @@ command to shift to user's home directory
 
 Task 3:
 command to display current directory contents in the long format
+
+Task 4:
+command to display hidden files in directory
+
+
