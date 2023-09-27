@@ -48,3 +48,6 @@ command to move all files beginning with an uppercase letter to /tmp/u
 
 Task 16:
 command to delete files ending with the character ~
+
+Task 17:
+create directories in current directory
