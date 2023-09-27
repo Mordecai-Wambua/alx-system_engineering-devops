@@ -37,3 +37,6 @@ command to list all files including hidden files in current, parent and boot dir
 Task 12:
 command to show the file type of iamafile located in /tmp
 
+Task 13:
+creating as symbolic link to /bin/ls called _ls_ in current working directory
+
