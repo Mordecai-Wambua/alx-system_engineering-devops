@@ -51,3 +51,6 @@ command to delete files ending with the character ~
 
 Task 17:
 create directories in current directory
+
+Task 18:
+command to list all files and directories separated by commas
