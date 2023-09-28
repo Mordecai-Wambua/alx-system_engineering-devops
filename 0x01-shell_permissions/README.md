@@ -10,4 +10,6 @@ command to print all groups current user is a part of
 Task 3:
 command to transfer file ownership to the user betty
 
+Task 4:
+command to create an empty file called hello
 
