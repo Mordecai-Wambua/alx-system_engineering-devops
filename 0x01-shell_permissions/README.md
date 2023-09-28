@@ -5,5 +5,9 @@ Task 1:
 command to print the effective username of the current user
 
 Task 2:
-commant to print all groups current user is a part of
+command to print all groups current user is a part of
+
+Task 3:
+command to transfer file ownership to the user betty
+
 
