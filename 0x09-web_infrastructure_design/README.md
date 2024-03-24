@@ -13,7 +13,7 @@ Makes use of:
 1 domain name foobar.com configured with a www record that points to your server IP 8.8.8.8
 
 
-Task 01:()
+Task 01:(1-distributed_web_infrastructure)
 Adds:
 2 servers
 1 web server (Nginx)
@@ -22,7 +22,7 @@ Adds:
 1 set of application files (your code base)
 1 database (MySQL)
 
-Task 02:()
+Task 02:(2-secured_and_monitored_web_infrastructure)
 Adds:
 3 firewalls
 1 SSL certificate to serve www.foobar.com over HTTPS
