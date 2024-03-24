@@ -1,0 +1,34 @@
+https://imgur.com/sUklZJ4
+
+TASK 00:
+What is a server?
+A server is a device that provides functionality to other devices on a network.
+
+What is the role of the domain name?
+It is responsible for mapping human-readable hostnames to their corresponding internet protocol addresses.
+
+What type of DNS record www is in www.foobar.com
+It is a CNAME
+
+What is the role of the web server?
+Provides an environment in which the server-side program can execute and pass back the generated responses.
+
+What is the role of the application server.
+It exposes business logic to client applications through various protocols.
+
+What is the role of the database.
+Provides an organized collection of information or data thus allowing efficient storage and retrieval.
+
+What is the server using to communicate with the computer of the user requesting the website.
+HTTP protocol
+
+Issues in this infrastructure:
+SPOF
+It contains only one server, one web server, one application server and database. This makes the entire infrastructure vulnerable as failure of this server grinds all operations to a halt.
+
+Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+This deployment will increase the downtime as there are no fail-safes/ redundancies thus the entire website will have to stop till the maintenance is over then its deployed.
+
+Cannot scale if too much incoming traffic.
+The server is exposed to all types of traffic at once and cannot effectively manage it. This will strain it thus it is not easily scalable neither is proper utilization of it.
+

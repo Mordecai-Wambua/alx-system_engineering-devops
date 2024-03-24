@@ -1,0 +1,33 @@
+https://imgur.com/a/pMmMSj7
+
+Task 02
+You must be able to explain some specifics about this infrastructure:
+For every additional element, why you are adding it
+
+The 2 servers:
+One is to contain the load balancer to manage the flow of information between the servers and its end point devices(users).
+The other is to act as a fail-over copy of the first server. This provides a layer of redundancy that helps keep the website available incase of downtimes, planned or unplanned.
+
+What distribution algorithm your load balancer is configured with and how it works
+The load balancer makes use of Round-Robin algorithm
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+It is enabling an Active-Passive setup
+In Active-Active both server instances are functional in real-time, processing user requests/traffic while in Active-Passive we have one server handling user requests and the other being on standby incase of failure of the other.
+
+How a database Primary-Replica (Master-Slave) cluster works
+Works by having data from one server, the master, be replicated to one or more servers, the slaves. Changes in master are replicated in the slaves either immediately or scheduled for a later time.
+
+What is the difference between the Primary node and the Replica node in regard to the application
+The primary node handles real-time traffic while the replica node is a copy of the primary node and mainly acts as a redundant layer. 
+
+
+You must be able to explain what the issues are with this infrastructure:
+Where are SPOF
+The load balancer is limiting. Having only one load balancer makes it a SPOF as incase of failure the entire system is affected.
+
+Security issues (no firewall, no HTTPS)
+The user makes use of HTTP protocal which offers no encryption between the data exchanged with the server thus a security issue. Furthermore, the is no firewall on the servers thus exposing them to threats both from the internet and from within itself.
+
+No monitoring
+There is no monitoring software in the implemented system which would help by keeping track of performance, transaction and issues by keeping records over a long time which helps in studying the trends and adjust the configurations from an informed point of view.

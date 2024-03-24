@@ -1,0 +1,33 @@
+https://imgur.com/uXfALqJ
+
+Task 02
+You must be able to explain some specifics about this infrastructure:
+For every additional element, why you are adding it
+The firewalls are to safeguard the  servers from both threats from the internet and from within the servers. SSL certificate is to enable usage of HTTPS protocal. Monitoring clients help in collecting logs and record server usage.
+
+What are firewalls for
+They are to allow, limit or block network traffic based on preconfigured rules.
+
+Why is the traffic served over HTTPS
+It offers encryption thus is more secure. It prevernts eavesdropping into communication between the webserver and users.
+
+What monitoring is used for
+ proper analysis of server usage thus offering a better analysis of server use. This enables easier discovery of problems and uncovering usage patterns thus easier planning on maintenances.
+
+How the monitoring tool is collecting data
+Takes logs of the server components. This involves logins by users, crashes and errors.
+
+Explain what to do if you want to monitor your web server QPS
+Configuring the monitoring service to collect relevant metrics and ensure that the web server exposes the QPS metrics to the monitoring tool.
+
+
+You must be able to explain what the issues are with this infrastructure:
+Why terminating SSL at the load balancer level is an issue
+This causes a loss of encryption thus introducing security issues. This also
+requires more processing from the load balancer which slows it down.
+
+Why having only one MySQL server capable of accepting writes is an issue
+This makes it easily get overloaded in peak times thus becoming a limiting factor in performance.
+
+Why having servers with all the same components (database, web server and application server) might be a problem
+This makes them vulnerable to the same issues. Thus failure at one point will be reflected on all components.
