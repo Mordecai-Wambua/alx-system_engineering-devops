@@ -1,5 +1,6 @@
 #using Puppet to make changes to our configuration file.
-file { '/root/.ssh/config':
+
+file { '/etc/ssh/ssh_config':
   owner   => 'root',
   group   => 'root',
   content => "
