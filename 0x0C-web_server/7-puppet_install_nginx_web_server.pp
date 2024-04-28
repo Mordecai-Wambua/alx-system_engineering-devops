@@ -1,6 +1,7 @@
 #Server configuration using Puppet nginx install and redirect
 exec { 'update server':
-  command => '/usr/bin/apt-get update'
+  command  => '/usr/bin/apt-get update',
+  provider => 'shell'
 }
 
 package { 'nginx':
@@ -8,12 +9,12 @@ package { 'nginx':
   require => Exec['update server']
 }
 
-file {'home':
+file { 'html':
   path    => '/var/www/html/index.html',
   content => 'Hello World!'
 }
 
-exec {'redirects':
+exec { 'redirects':
   command  => sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default,
   provider => 'shell'
 }
