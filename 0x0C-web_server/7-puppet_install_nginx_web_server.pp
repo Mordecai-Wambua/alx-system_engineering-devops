@@ -1,4 +1,4 @@
-#Server configuration using Puppet
+#Server configuration using Puppet nginx install and redirect
 exec { 'update server':
   command => '/usr/bin/apt-get update'
 }
