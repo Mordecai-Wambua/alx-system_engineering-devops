@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#script installs and configures HAproxy on lb-01 server
+
+sudo apt-get -y update
+
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.5
+sudo apt-get -y update
+
+sudo apt-get -y install haproxy
+
+echo "ENABLED=1" >> /etc/default/haproxy
+
+sudo service haproxy start
+config="\
+frontend haproxy_balancer
+    bind *:80
+    mode http
+    default_backend webservers
+    
+backend webservers
+    balance roundrobin
+    server 531594-web-01 52.91.118.63 check
+    server 531594-web-02 54.175.17.114 check
+"
+echo "$config" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
