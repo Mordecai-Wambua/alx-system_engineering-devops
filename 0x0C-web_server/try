@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#sets 404 error and 301 redirect
+#configure a custom 404 page
 
 sudo apt-get update
 sudo apt-get -y install nginx
