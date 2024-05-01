@@ -3,26 +3,21 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/index.html
 
 config=\
 "server {
 	listen 80 default_server;
         listen [::]:80 default_server;
-
 	root /var/www/html;
-
 	index index.html index.htm index.nginx-debian.html;
-
         server_name _;
-
         location / {
                 try_files $uri $uri/ =404;
         }
-
-	error_page 404 /custom_404.html;
-	location = /custom_404.html {
-	internal;
+	error_page 404 /404.html;
+	location  /404.html {
+		internal;
 	}
 
 	location /redirect_me {
@@ -30,7 +25,7 @@ config=\
 	}
 }"
 
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
 echo "$config" > /etc/nginx/sites-available/default
 
 if [ "$(pgrep nginx)" -le 0 ];
