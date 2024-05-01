@@ -2,7 +2,7 @@
 #Implementing a 301 redirect and custom 404 page
 sudo apt-get -y update
 sudo apt-get -y install nginx
-service nginx start
+
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
 config=\
@@ -33,4 +33,9 @@ config=\
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 echo "$config" > /etc/nginx/sites-available/default
 
-sudo service nginx restart
+if [ "$(pgrep nginx)" -le 0 ];
+then
+    service nginx start
+else
+    service nginx restart
+fi;
