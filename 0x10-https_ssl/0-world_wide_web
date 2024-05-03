@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#displays information about subdomains
+
+func () {
+	dig "$2"."$1" | awk '/;; ANSWER SECTION:/ {getline; split($1, arr, "."); print "The subdomain " arr[1] " is a " $4 " record and points to " $5}'
+}
+
+if [ "$#" == 1 ]
+then
+	func "$1" "www"
+	func "$1" "lb-01"
+	func "$1" "web-01"
+	func "$1" "web-02"
+elif [ "$#" == 2 ]
+then
+	func "$1" "$2"
+	
+fi
