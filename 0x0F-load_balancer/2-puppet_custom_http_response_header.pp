@@ -8,7 +8,7 @@ package { 'nginx':
   require => Exec['update']
 }
 
-file {'/var/www/html/index.html':
+file { '/var/www/html/index.html':
   ensure  => 'file',
   content => 'Hello World!'
 }
@@ -22,7 +22,7 @@ file_line { 'redirect':
 
 file_line { 'header':
   ensure => 'present',
-  path   => '/etc/nginx/sites-available/default;',
+  path   => '/etc/nginx/sites-available/default',
   after  => 'server_name _;',
   line   => 'add_header X-Served-By $hostname;'
 }
