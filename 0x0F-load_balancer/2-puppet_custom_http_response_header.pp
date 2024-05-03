@@ -10,7 +10,7 @@ package { 'nginx':
 
 file {'/var/www/html/index.html':
   ensure  => 'file',
-  content => 'Hello World'
+  content => 'Hello World!'
 }
 
 file_line { 'redirect':
@@ -24,10 +24,11 @@ file_line { 'header':
   ensure => 'present',
   path   => '/etc/nginx/sites-available/default;',
   after  => 'server_name _;',
-  line   => 'add_header X-Served-By \$hostname;'
+  line   => 'add_header X-Served-By $hostname;'
 }
 
 service { 'nginx':
   ensure  => 'running',
+  enable  => true,
   require => Package['nginx']
 }
