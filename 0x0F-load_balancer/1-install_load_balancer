@@ -19,8 +19,8 @@ frontend lb-01
 
 backend web_servers
     balance roundrobin
-    server 531594-web-01 52.91.118.63 check
-    server 531594-web-02 54.175.17.114 check
+    server 531594-web-01 52.91.118.63:80 check
+    server 531594-web-02 54.175.17.114:80 check
 EOF'
 
 sudo service haproxy start
