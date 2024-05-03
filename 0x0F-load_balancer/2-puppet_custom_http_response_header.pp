@@ -1,12 +1,12 @@
 #setup a custom HTTP header
-exec { 'update':
-  command  => '/usr/bin/apt-get -y update',
+exec { 'update server':
+  command  => '/usr/bin/apt-get update',
   provider => 'shell'
 }
 
 package { 'nginx':
   ensure  => 'installed',
-  require => Exec['update']
+  require => Exec['update server']
 }
 
 file { '/var/www/html/index.html':
@@ -21,15 +21,14 @@ file_line { 'redirect':
   line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
 }
 
+service { 'nginx':
+  ensure  => 'running',
+  require => Package['nginx']
+}
+
 file_line { 'header':
   ensure => 'present',
   path   => '/etc/nginx/sites-available/default',
   after  => 'server_name _;',
   line   => 'add_header X-Served-By $hostname;'
-}
-
-service { 'nginx':
-  ensure  => 'running',
-  enable  => true,
-  require => Package['nginx']
 }
