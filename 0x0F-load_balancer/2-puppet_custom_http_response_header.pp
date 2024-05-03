@@ -1,6 +1,7 @@
 #setup a custom HTTP header
 exec { 'update':
-  command => '/usr/bin/apt-get -y update'
+  command  => '/usr/bin/apt-get -y update',
+  provider => 'shell'
 }
 
 package { 'nginx':
