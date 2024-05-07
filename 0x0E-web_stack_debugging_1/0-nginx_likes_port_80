@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#configures nginx to listen on port 80
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+nginx -s reload
