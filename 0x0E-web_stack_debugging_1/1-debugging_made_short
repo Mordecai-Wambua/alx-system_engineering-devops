@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#configures nginx to listen at port 80 then kills it
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+pkill -1 nginx
