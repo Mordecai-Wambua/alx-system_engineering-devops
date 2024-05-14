@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#ensures nginx is running as nginx user and listening on port 8080
+
+pkill apache2
+chown nginx /etc/nginx/nginx.conf
+sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+sudo service nginx reload
