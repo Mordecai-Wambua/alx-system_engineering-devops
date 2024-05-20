@@ -9,17 +9,20 @@ import sys
 
 if __name__ == '__main__':
     url = 'https://jsonplaceholder.typicode.com'
-    names = requests.get(url + "/users").json()
+    users = requests.get(url + "/users").json()
     todos = requests.get(url + "/todos").json()
 
     data = {}
-    for name in names:
+    for user in users:
+        user_id = user['id']
+        username = user['username']
+        data[user_id] = []
         for i in todos:
-            if i['userId'] == name['id']:
-                data.update({i['id']: [{
-                    "username": name['username'],
+            if i['userId'] == user_id:
+                data[user_id].append({
+                    "username": username,
                     "task": i['title'],
-                    "completed": i['completed']}]})
+                    "completed": i['completed']})
 
     filename = 'todo_all_employees.json'
 
